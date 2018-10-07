@@ -1,8 +1,11 @@
 package de.diskostu.demo
 
-import org.junit.Test
-import kotlin.test.assertEquals
+import kotlin.test.Test
 
 class HelloTest {
 
+    @Test
+    fun foo() {
+
+    }
 }
