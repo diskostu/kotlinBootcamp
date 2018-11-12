@@ -1,4 +1,4 @@
-package de.diskostu.demo
+package de.diskostu.demo.kotlinBasics
 
 fun main(args: Array<String>) {
     practiceBasicOperations()
