@@ -57,11 +57,11 @@ fun practiceNullability() {
     println("blueColor: $blueColor")
 }
 
-@Suppress("UNUSED_VARIABLE", "ASSIGNED_BUT_NEVER_ACCESSED_VARIABLE", "UNUSED_VALUE")
         /**
          * https://classroom.udacity.com/courses/ud9011/lessons/605a8cec-a22b-4778-a682-39b35cf8467b/concepts/336fff8c-1cab-4243-92b0-384d8493080b
          */
-fun practiceNullabilityLists() {
+        @Suppress("UNUSED_VARIABLE", "VARIABLE_WITH_REDUNDANT_INITIALIZER")
+        fun practiceNullabilityLists() {
     println()
     println("practiceNullabilityLists")
 
@@ -78,6 +78,7 @@ fun practiceNullabilityLists() {
 
     var demoListNullable: List<String>? = listOf("bla", "blubb")
     demoListNullable = null
+    println("demoListNullable : $demoListNullable")
 }
 
 /**
@@ -90,7 +91,15 @@ fun practiceNullChecks() {
     val nullTest1: Int? = -22
     val nullTest2: Int? = null
 
-//    println("nullTest1: " + (nullTest1?.inc() ?: 0))
+    // print the value of nullTest1 if it is not null, otherwise print some string
+    println("nullTest1: " + (nullTest1 ?: "nullTest1 is null!"))
+
+    // increment the value of nullTest1 if it is not null, otherwise show zero
+    println("nullTest1: " + (nullTest1?.inc() ?: 0))
+
+    // increment the value of nullTest1 if it is not null, otherwise show zero
     println("nullTest1: ${(nullTest1?.inc() ?: 0)}")
+
+    // increment the value of nullTest2 if it is not null, otherwise show zero
     println("nullTest2: " + (nullTest2?.inc() ?: 0))
 }
