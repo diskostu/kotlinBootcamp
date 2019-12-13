@@ -13,6 +13,15 @@ fun feedTheFish() {
     val food = fishFood(day)
 
     println("Today is $day and the food is $food")
+
+    if (shouldChangeTheWater(day)) {
+        println("We should change the water.")
+    }
+}
+
+
+fun shouldChangeTheWater(day: String, temperature: Int = 22, dirty: Int = 20): Boolean {
+    return true
 }
 
 
