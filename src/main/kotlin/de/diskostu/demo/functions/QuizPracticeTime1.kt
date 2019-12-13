@@ -6,7 +6,7 @@ fun main(args: Array<String>) {
     dayOfWeek()
 }
 
-fun dayOfWeek() {
+private fun dayOfWeek() {
     val dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
 
     print("Hey, it's ")
