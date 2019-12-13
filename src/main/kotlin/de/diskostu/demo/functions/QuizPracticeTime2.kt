@@ -4,7 +4,7 @@ fun main(args: Array<String>) {
     println("fortune = ${getFortuneCookie()}")
 }
 
-fun getFortuneCookie(): String {
+private fun getFortuneCookie(): String {
     val fortunes = listOf(
             "You will have a great day!",
             "Things will go well for you today.",
