@@ -8,6 +8,14 @@ fun main(args: Array<String>) {
 }
 
 
+/**
+ * This method checks if a new fish fits in an existing aquarium.
+ *
+ * @param tankSize the size of the aquarium in gallons
+ * @param currentFish a list with sizes of the current fishes
+ * @param fishSize the size of the fish to be added
+ * @param hasDecorations `true`, if the aquarium has decorations, otherwise `false`
+ */
 private fun fitMoreFish(tankSize: Int,
                         currentFish: List<Int>,
                         fishSize: Int = 2,
