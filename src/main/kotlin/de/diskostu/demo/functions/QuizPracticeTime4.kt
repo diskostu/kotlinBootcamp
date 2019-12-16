@@ -15,13 +15,14 @@ fun main(args: Array<String>) {
  * @param currentFish a list with sizes of the current fishes
  * @param fishSize the size of the fish to be added
  * @param hasDecorations `true`, if the aquarium has decorations, otherwise `false`
+ * @return `true`, if the fish to be added has space in the aquarium, otherwise `false`
  */
 private fun fitMoreFish(tankSize: Int,
                         currentFish: List<Int>,
                         fishSize: Int = 2,
                         hasDecorations: Boolean = true): Boolean {
     val currentFishLength = currentFish.sum()
-    val effectiveTankSize = if (hasDecorations) tankSize * 0.8 else tankSize.toDouble()
+    val effectiveTankSize = tankSize * if (hasDecorations) 0.8 else 1.0
 
     return effectiveTankSize - currentFishLength - fishSize >= 0
 }
