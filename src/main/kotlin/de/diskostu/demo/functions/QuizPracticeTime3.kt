@@ -1,7 +1,7 @@
 package de.diskostu.demo.functions
 
 fun main(args: Array<String>) {
-    for (i in 1..10) {
+    repeat(10) {
         val fortuneCookie = getFortuneCookie(getBirthday())
         println("fortune = $fortuneCookie")
     }

@@ -21,7 +21,12 @@ fun feedTheFish() {
 
 
 fun shouldChangeTheWater(day: String, temperature: Int = 22, dirty: Int = 20): Boolean {
-    return true
+    return when {
+        temperature > 30 -> true
+        dirty > 30 -> true
+        day.equals("sunday", true) -> true
+        else -> false
+    }
 }
 
 
