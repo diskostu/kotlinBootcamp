@@ -1,5 +1,7 @@
 package de.diskostu.demo.aquarium
 
+import de.diskostu.demo.spice.SimpleSpice
+
 fun main(args: Array<String>) {
     val spice = SimpleSpice()
 
