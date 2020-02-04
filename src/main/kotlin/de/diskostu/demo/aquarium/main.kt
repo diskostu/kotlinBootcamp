@@ -1,7 +1,8 @@
 package de.diskostu.demo.aquarium
 
-fun main(args: Array<String>) {
+fun main() {
     buildAuqarium()
+    makeFish()
 }
 
 private fun buildAuqarium() {
@@ -24,4 +25,21 @@ private fun buildAuqarium() {
             "length ${myAquarium2.length} " +
             "width ${myAquarium2.width} " +
             "height ${myAquarium2.height}")
+}
+
+
+fun feedFish(fish: FishAction) {
+    // make some food then
+    fish.eat()
+}
+
+
+fun makeFish() {
+    val shark = Shark()
+    val plecostomus = Plecostomus()
+
+    println("Shark: ${shark.color} \nPlecostomus: ${plecostomus.color}")
+
+    shark.eat()
+    plecostomus.eat()
 }

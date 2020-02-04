@@ -22,6 +22,6 @@ fun main() {
     notSoSpicyThings.forEach { println(it) }
 }
 
-fun makeSalt(): Spice {
+private fun makeSalt(): Spice {
     return Spice("Salt", "mild")
 }
