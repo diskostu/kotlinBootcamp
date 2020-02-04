@@ -1,4 +1,4 @@
-package de.diskostu.demo.aquarium
+package de.diskostu.demo.spice
 
 class SimpleSpice {
 
