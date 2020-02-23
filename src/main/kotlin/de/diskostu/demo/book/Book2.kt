@@ -27,4 +27,18 @@ private fun main() {
     val allData = demo.getAllData()
 
     println("Here is your book, <${allData.first}> by ${allData.second} written in ${allData.third}.")
+
+    val allBooks = setOf("Hamlet", "Romeo and Juliet", "King Lear")
+
+    val library = mapOf("William Shakespeare" to allBooks)
+
+    println(library.any { it.value.contains("Hamlet") })
+
+    val moreBooks = mutableMapOf("It" to "Stephen King")
+    val orPut = moreBooks.getOrPut("Cujo") { "Stephen King" }
+    val orPut2 = moreBooks.getOrPut("Cujo") { "Stephen King" }
+
+    println("moreBooks = $moreBooks")
+    println("orPut = $orPut")
+    println("orPut2 = $orPut2")
 }
