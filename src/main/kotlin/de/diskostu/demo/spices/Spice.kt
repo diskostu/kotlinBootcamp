@@ -8,7 +8,7 @@ private fun main() {
 }
 
 
-abstract class Spice(val name: String, private val spiciness: String = "mild") : SpiceColor {
+sealed class Spice(val name: String, private val spiciness: String = "mild") : SpiceColor {
 
     private val heat: Int
         get() {
@@ -35,7 +35,7 @@ class Curry(spiciness: String) : Spice("Curry", spiciness), Grinder {
         println("preparing $name")
     }
 
-    override val color: String
+    override val color: Color
         get() = YellowSpiceColor.color
 
     override fun grind() {
@@ -48,7 +48,12 @@ interface Grinder {
 }
 
 interface SpiceColor {
-    val color: String
+    val color: Color
+}
+
+
+enum class Color(val rgb: Int) {
+    RED(0xFF0000), GREEN(0x00FF00), BLUE(0x0000FF), YELLOW(0xFFFF00);
 }
 
 
@@ -56,6 +61,6 @@ interface SpiceColor {
  * Singleton
  */
 object YellowSpiceColor : SpiceColor {
-    override val color: String
-        get() = "Yellow"
+    override val color: Color
+        get() = Color.YELLOW
 }
