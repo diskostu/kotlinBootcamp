@@ -15,7 +15,7 @@ open class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int 
             height = (value * 1000) / (width * length)
         }
 
-    open var water = volume * 0.9
+    open var water = this.volume * 0.9
 
 
     constructor(numberOfFish: Int) : this() {

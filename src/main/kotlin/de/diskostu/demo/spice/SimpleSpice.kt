@@ -2,8 +2,8 @@ package de.diskostu.demo.spice
 
 class SimpleSpice {
 
-    var name: String = "curry"
-    var spiciness: String = "mild"
+    private var name: String = "curry"
+    private var spiciness: String = "mild"
 
     val heat: Int
         get() {

@@ -5,6 +5,7 @@ fun main(args: Array<String>) {
     val numberOfPlants = 10
 
     // without string template
+    @Suppress("ConvertToStringTemplate")
     println("I have " + numberOfFish + " fishes and " + numberOfPlants + " plants in my aquarium")
 
     // with string template
